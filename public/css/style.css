@@ -1,0 +1,38 @@
+.uwu-image{
+ height:400px;
+    width: 400px;
+}
+.login-margin{
+    margin-top: 60px;
+}
+.logout-button{
+    display: block;
+    font-weight: 500;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    height: 40px;
+    line-height: 40px;
+    border: transparent;
+    letter-spacing: 1px;
+    background: transparent;
+}
+.logout-button:hover{
+    color: #f55858;
+}
+.background-header .logo, .background-header .main-nav .nav button {
+    color: #1e1e1e !important;
+}
+.choice-img{
+    width: 30%;
+    /* Link to your background image using in the property below! */
+    background: scroll center url('https://cdn.discordapp.com/attachments/818998720682131516/820357764466737152/art-fox.jpg');
+    background-size: cover;
+}
+.purple-icon{
+    color: #6f42c1 !important;
+}
