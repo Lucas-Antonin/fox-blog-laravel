@@ -36,14 +36,16 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li class="scroll-to-section"><a href="{{ route('home') }}" class="active">Home</a></li>
-                        <li class=""><a href="{{ route('dashboard') }}">Dashboard</a></li>
+
                         <li class="mr-3"><a href="{{ route('posts') }}">Posts</a></li>
+
                         @guest
                             <li class=""><a href="{{ route('login') }}">Login</a></li>
                             <li class=""><a href="{{ route('register') }}">Register</a></li>
                         @endguest
 
                        @auth
+                            <li class="mr-3"><a href="{{ route('makepost') }}">Make a Post</a></li>
                            <form action="{{ route('logout') }}" method="post">
                                @csrf
                                 <button class="logout-button">Logout</button>

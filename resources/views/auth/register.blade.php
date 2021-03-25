@@ -24,7 +24,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title text-center">Register</h5>
-                            <form action="{{ route('register') }}" method="post" class="form-signin">
+                            <form action="{{ route('register') }}" method="post" class="form-signin mb-5">
                                 @csrf
                                 <div class="form-label-group">
                                     <input type="text" id="name" name="name" value="{{ old('name') }}" class="form-control @error('name')border border-danger @enderror" placeholder="Name" autocomplete="off" autofocus>

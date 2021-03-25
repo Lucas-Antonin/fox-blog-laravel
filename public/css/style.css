@@ -33,6 +33,22 @@
     background: scroll center url('https://cdn.discordapp.com/attachments/818998720682131516/820357764466737152/art-fox.jpg');
     background-size: cover;
 }
+.preview-img-post{
+    height: 100px;
+    width: 100px;
+}
 .purple-icon{
     color: #6f42c1 !important;
 }
+.img-post-size{
+    height: 300px;
+}
+.img-post-position{
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+.margin-posts{
+    margin-top: 100px;
+}
+

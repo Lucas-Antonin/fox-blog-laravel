@@ -28,7 +28,7 @@
                     <a href="#about" class="main-button-slider">Find Out More</a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                    <img class="rounded rounded-circle uwu-image  d-block mx-auto" src="{{ asset("images/uwu-fox.jpg") }}"  alt="First Vector Graphic">
+                    <img class="rounded rounded-circle uwu-image  d-block mx-auto" src="{{ asset("images/websiteimages/uwu-fox.jpg") }}"  alt="First Vector Graphic">
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                <img src="{{ asset("images/fennec-fox.jpg") }}" class="rounded rounded-circle uwu-image  d-block mx-auto" alt="App">
+                <img src="{{ asset("images/websiteimages/fennec-fox.jpg") }}" class="rounded rounded-circle uwu-image  d-block mx-auto" alt="App">
             </div>
             <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
                 <div class="left-heading">

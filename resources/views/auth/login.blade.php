@@ -3,6 +3,11 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/register-form.css') }}">
+    <style>
+        .firefox-fix-bakckground{
+            height: 100px;
+        }
+    </style>
 </head>
 @section('content')
     <!-- ***** Preloader Start ***** -->
@@ -29,7 +34,7 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <form action="{{ route('login') }}" method="post" class="form-signin">
+                        <form action="{{ route('login') }}" method="post" class="form-signin mb-5">
                             @csrf
 
                             <div class="form-label-group">
@@ -64,6 +69,7 @@
             </div>
         </div>
     </div>
+    <div class="firefox-fix-bakckground"></div>
 @endsection
 
 

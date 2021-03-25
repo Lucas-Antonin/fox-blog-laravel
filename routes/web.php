@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserPostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +37,9 @@ Route::post('/login', [LoginController::class, 'store'])->middleware('guest');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')
 ->middleware('auth');
 
-Route::get('/posts', [PostController::class, 'index'])->name('posts');
+Route::get('/posts', [PostController::class, 'posts'])->name('posts');
+Route::get('/makepost', [PostController::class, 'index'])->name('makepost')
+->middleware('auth');
+Route::post('/makepost', [PostController::class, 'store']);
 
-
+Route::get('/user/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');

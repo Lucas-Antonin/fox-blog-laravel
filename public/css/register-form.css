@@ -5,7 +5,7 @@
 
 body {
     background-image: url('https://cdn.discordapp.com/attachments/818998720682131516/818998748708732959/banner-bg.png') !important;
-    height: 100%;
+    background-size: cover;
 }
 
 .card-signin {

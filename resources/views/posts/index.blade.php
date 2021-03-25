@@ -23,28 +23,47 @@
                         <!-- Background image for card set in CSS! -->
                     </div>
                     <div class="card-body">
-
                         <h5 class="card-title text-center">What do you want to post?</h5>
-                        <textarea class="form-control mb-2" placeholder="Post somefoxthing" id="floatingTextarea2" style="height: 150px"></textarea>
-
-                        <ul>
-                            <div class="row">
-                            <div class="col-lg-1 col-md-12 col-sm-12">
-                            <a href="#"><li><i class="far fa-images fa-2x purple-icon"></i></li></a>
+                        @if(Session::has('post_added'))
+                            <div class="alert alert-success">
+                                {{ Session::get('post_added') }}
                             </div>
-                            <div class="col-lg-1 col-md-12 col-sm-12">
-                            <a href="#"><li><i class="fab fa-youtube fa-2x purple-icon"></i> </li></a>
+                            @endif
+                        <form action="{{ route('makepost') }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                        <textarea class="form-control mb-2" placeholder="Post somefoxthing" name="text" id="floatingTextarea2" style="height: 150px"></textarea>
+                        @error('text')
+                            <div class="alert alert-danger">
+                                {{$message}}
                             </div>
+                            @enderror
+                        <input type="file" name="file" class="form-control mb-2" onchange="previewFile(this)">
+                        <img class="preview-img-post mb-2" id="previewImg" alt="your img">
+                            @error('file')
+                            <div class="alert alert-danger">
+                                {{$message}}
                             </div>
-                        </ul>
-
-
-                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</button>
+                        @enderror
+                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Post</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function previewFile(input){
+            var file=$("input[type=file]").get(0).files[0];
+            if(file){
+                var reader = new FileReader();
+                reader.onload = function(){
+                    $('#previewImg').attr("src", reader.result);
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 @endsection
 
 
